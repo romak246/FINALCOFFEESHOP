@@ -44,19 +44,6 @@ class Database:
         self.connection.commit()
 
 
-def volume_check():
-    try:
-        final_volume = int(input('Объем стакана?:\n'))
-        if final_volume < 1 or final_volume < 200:
-            raise UserWarning('')
-
-    except UserWarning:
-        print("Мы не наливаем в стаканы меньше 200 мл.")
-        return volume_check()
-    except ValueError:
-        print('Введите корректное значение.')
-        return volume_check()
-    return final_volume
 
 # def update_grade(final_grade,order_id):
 #     connection = pymysql.connect(
